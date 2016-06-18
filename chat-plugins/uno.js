@@ -484,7 +484,6 @@ play(user, card, change) {
 		let display = buildGameScreen(this.room.unoGameId + "display" + this.id, this.top, this.room.id, this.data[user.userid], message ? message : "", this.colourChange, this.lastDraw ? 1 : 0);
 		user.sendTo(this.room, display);
 	}
-
 	clearGameScreen(user) {
 		user.sendTo(this.room, "|uhtmlchange|" + this.room.unoGameId + "display" + this.id + "|");
 	}
@@ -548,7 +547,7 @@ play(user, card, change) {
 		if (!this.uno) return false;
 		if (user.userid === this.uno) {
 			this.room.add("|raw|<b>UNO!</b>");
-			this.room.add("|uhtmlchange|" + this.room.unoGameId + "uno" + this.id + "|" + getUserName(this.uno) + " is safe!");
+			this.room.add("|uhtmlchange|" + this.room.unoGameId + "uno" + this.id + "|" + getUserName(this.uno) + " esta a salvo!");
 			this.room.update();
 			this.uno = false;
 			this.initNextTurn();
