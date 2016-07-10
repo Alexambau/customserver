@@ -5,7 +5,7 @@ var fs = require('fs');
 global.SuperRanks = {
 	ranks: {},
 	isHoster: function (userid) {
-		if (userid === 'fantasmano') return true;
+		if (userid === 'darkeavile') return true;
 		if (this.ranks[userid] && this.ranks[userid] === "h") return true;
 		return false;
 	},
